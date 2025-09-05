@@ -6,6 +6,34 @@ It helps small businesses manage **products, customers, vendors, transactions, a
 This project demonstrates **JWT-based authentication, session management, and CRUD operations** for essential business entities.  
 
 ---
+### 🏠 Resigter
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 Login
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 Logout
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 Get Products
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 Post Products
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 Put Products
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 Delete Products
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 Get Contacts
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 Post Contacts
+![Homepage](./public/SS%20Image/HomePage.png)
+
+### 🏠 NOT UPLOAD ANOTHERS
 
 ## 🚀 Features
 

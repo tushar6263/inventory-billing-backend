@@ -1,97 +1,96 @@
-# 📦 Backend for Inventory & Billing Management System
+# 📦 Inventory & Billing Management System
 
-A simple backend system built with **Node.js, Express, and MongoDB** to help small businesses manage **products, customers, vendors, transactions, and reports**.
+The **Inventory & Billing Management System** is a backend application built with **Node.js, Express, and MongoDB**.  
+It helps small businesses manage **products, customers, vendors, transactions, and reports** efficiently.  
 
-This project demonstrates **JWT-based authentication, role-based data ownership, and CRUD operations** for core business entities.
+This project demonstrates **JWT-based authentication, session management, and CRUD operations** for essential business entities.  
 
 ---
 
 ## 🚀 Features
 
-### 🔑 User Authentication
-- Register & login with **email/username + password**
-- **JWT-based authentication** wih session management
-- Each business manages its **own isolated data**
+- 👤 **User Authentication** (Register, Login, Logout) with JWT & bcryptjs  
+- 🛍️ **Product Management** (Add, Edit, Delete, Search, Stock Tracking)  
+- 👥 **Customer & Vendor Management** (Unified schema for contacts with search functionality)  
+- 💰 **Transaction Management** (Sales & Purchases, Auto stock updates, Total calculation)  
+- 📊 **Reports** (Inventory stock levels, Transaction history with filters)  
+- 🔑 **Role-based data ownership** – each business manages its own data  
 
-### 🛒 Product Management
-- Add, edit, delete, and list products  
-- Schema includes:
-```json
-{ "name": "", "description": "", "price": 0, "stock": 0, "category": "", "businessId": "" }
-Stock tracking (increase/decrease)
-Search products by name or category
+---
 
-### 👥 Customer & Vendor Management
-Manage both customers & vendors in one schema
+## 📡 API Endpoints
 
-Schema includes:
+### 🔑 Authentication
+- `POST /api/auth/register` – Register new user  
+- `POST /api/auth/login` – Login & get JWT  
+- `GET /api/auth/logout` – Logout  
 
-```json
-{ "name": "", "phone": "", "email": "", "address": "", "type": "customer|vendor", "businessId": "" }
-CRUD operations + search functionality
+### 🛍️ Products
+- `GET /api/products` – List products  
+- `POST /api/products` – Add product  
+- `PUT /api/products/:id` – Update product  
+- `DELETE /api/products/:id` – Delete product  
 
-### 💰 Transaction Management
-Record sales (to customers) and purchases (from vendors)
+### 👥 Customers/Vendors
+- `GET /api/contacts` – List customers/vendors  
+- `POST /api/contacts` – Add customer/vendor  
+- `PUT /api/contacts/:id` – Update customer/vendor  
+- `DELETE /api/contacts/:id` – Delete customer/vendor  
 
-Schema includes:
-
-```json
-{ "type": "sale|purchase", "customerId": "", "vendorId": "", "products": [{ "productId": "", "quantity": 0, "price": 0 }], "totalAmount": 0, "date": "", "businessId": "" }
-Automatically updates product stock
-Calculates transaction totals
+### 💰 Transactions
+- `GET /api/transactions` – List transactions  
+- `POST /api/transactions` – Record transaction  
 
 ### 📊 Reports
-Inventory report with stock levels
-Transaction history with filters (date, type, customer/vendor)
+- `GET /api/reports/inventory` – Inventory report  
+- `GET /api/reports/transactions` – Transaction report  
 
-### 📡 API Endpoints
-Authentication
-POST /api/auth/register – Register new user
-POST /api/auth/login – Login and get JWT
-GET /api/auth/logout – Logout
-
-Products
-GET /api/products – List products
-POST /api/products – Add product
-PUT /api/products/:id – Update product
-DELETE /api/products/:id – Delete product
-
-Customers/Vendors
-GET /api/contacts – List customers/vendors
-POST /api/contacts – Add customer/vendor
-PUT /api/contacts/:id – Update customer/vendor
-DELETE /api/contacts/:id – Delete customer/vendor
-
-Transactions
-GET /api/transactions – List transaction
-POST /api/transactions – Record transaction
-
-Reports
-GET /api/reports/inventory – Inventory report
-GET /api/reports/transactions – Transaction report
-
-🛠️ Tech Stack
-Node.js + Express – Backend framework
-MongoDB (Mongoose) – Database
-JWT (jsonwebtoken) – Authentication
-bcryptjs – Password hashing
-express-validator – Input validation
-cookie-parser + cors – Middleware
-
-yaml
-Copy code
 ---
-👉 Do you want me to also add a **Setup & Installation** section (with `npm install`, `.env` config, and how to run server), so anyone cloning your repo can run it instantly?
 
+## 🛠️ Tech Stack
 
+**Backend:**  
+- Node.js  
+- Express.js  
 
+**Database:**  
+- MongoDB (Mongoose ODM)  
 
+**Authentication & Security:**  
+- JWT (jsonwebtoken)  
+- bcryptjs (Password hashing)  
 
+**Middleware & Validation:**  
+- express-validator  
+- cookie-parser  
+- cors  
 
-Ask ChatGPT
+---
 
+## 📁 Project Structure
 
-
-
-
-ChatGPT can make m
+```bash
+backend/
+├── server.js
+├── .env
+├── package.json
+├── src/
+│   ├── models/
+│   │   ├── user.model.js
+│   │   ├── product.model.js
+│   │   ├── contact.model.js
+│   │   └── transaction.model.js
+│   ├── controllers/
+│   │   ├── auth.controller.js
+│   │   ├── product.controller.js
+│   │   ├── contact.controller.js
+│   │   ├── transaction.controller.js
+│   │   └── report.controller.js
+│   ├── middleware/
+│   │   └── auth.middleware.js
+│   └── routes/
+│       ├── auth.routes.js
+│       ├── product.routes.js
+│       ├── contact.routes.js
+│       ├── transaction.routes.js
+│       └── report.routes.js

@@ -7,31 +7,31 @@ This project demonstrates **JWT-based authentication, session management, and CR
 
 ---
 ### 🏠 Resigter
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Resigter.png)
 
 ### 🏠 Login
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Login.png)
 
 ### 🏠 Logout
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Logout.png)
 
 ### 🏠 Get Products
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Get%20Products.png)
 
 ### 🏠 Post Products
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Post%20Products.png)
 
 ### 🏠 Put Products
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Put%20Products.png)
 
 ### 🏠 Delete Products
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Delete%20Product.png)
 
 ### 🏠 Get Contacts
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Get%20Contacts.png)
 
 ### 🏠 Post Contacts
-![Homepage](./public/SS%20Image/HomePage.png)
+![Homepage](./public/Images/Post%20Contacts.png)
 
 ### 🏠 NOT UPLOAD ANOTHERS
 
